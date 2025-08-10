@@ -1,31 +1,41 @@
-The application reminds students about upcoming assigments deadlines by checking their submission status found in the submission.txt file.
+Submission Reminder App
+This is a simple Bash app that helps check student assignment submissions and remind those who haven’t submitted yet.
+The script create_environment.sh sets up all the folders and files needed for the app.
 
-The submission reminder app: reminds you which students haven't submitted thei assignment, shows the assigmnemt name and how many days are left until the deadlines
+What will be created
+When you run create_environment.sh, it will create:
 
-How to intall
+submission_reminder_{yourName}/
+submission_reminder_{yourName}/
+│
+├── config/
+│   └── config.env
+│
+├── app/
+│   ├── reminder.sh
+│   ├── functions.sh
+│   └── submissions.txt
+│
+├── startup.sh
+#How to set it up
+Clone the repo:
+
 git clone https://github.com/OrpheliePerrine/submission_reminder_app_OrpheliePerrine.git
-cd submission_reminder_app_OrpheliePerrine
+cd submission_reminder_app_OrpheliePerrine>
 
-#then make the script executable
+#Make the script executable:
 chmod +x create_environment.sh
 
-#Run the script
+#Run the script:
 ./create_environment.sh
+Enter your name when asked.
 
-It will ask for you name, Enter your name
+The folder and files will be created.
+#To run the app
+Go to the new folder:
+cd submission_reminder_{yourName}
+Make startup.sh executable:
 
-List the files in your directory, a new file should be created
-
-Then cd into the new file: 
-cd submission_reminder_$name
-
-Run the main script
+chmod +x startup.sh
+# to start the app:
 ./startup.sh
-
-Assignment name and days remaining is shown
-reminded about students who have not submitted will also be shown
-
-Students data is stored in assets/submissons.txt. under the format:
-studentname, assignmentname, submissionstatus
-
-The script must be run in a linux environment
